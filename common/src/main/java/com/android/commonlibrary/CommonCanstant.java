@@ -1,7 +1,7 @@
 package com.android.commonlibrary;
 
 /**
- * Created by Administrator on 2016/5/26.
+ * Created by hsq on 2016/5/26.
  */
 public class CommonCanstant {
     public static final String COMPONENT_PROPERTIES="component.properties";

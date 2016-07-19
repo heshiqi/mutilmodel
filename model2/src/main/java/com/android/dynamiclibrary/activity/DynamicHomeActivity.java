@@ -10,10 +10,10 @@ import android.widget.Toast;
 
 import com.android.commonlibrary.entity.User;
 import com.android.dynamiclibrary.R;
-import com.android.dynamiclibrary.external.interactor.DynamicProxy;
+import com.android.dynamiclibrary.external.interactor.DynamicDelegate;
 
 /**
- * Created by Administrator on 2016/5/26.
+ * Created by hsq on 2016/5/26.
  */
 public class DynamicHomeActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -45,7 +45,7 @@ public class DynamicHomeActivity extends AppCompatActivity implements View.OnCli
     }
 
     private boolean checkIsLogin(){
-        User user= DynamicProxy.getInstance(getApplication()).getUser();
+        User user= DynamicDelegate.getInstance(getApplication()).getUser();
         Log.d("hh",user+"");
         return user!=null;
     }

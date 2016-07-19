@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * Created by Administrator on 2016/5/26.
+ * Created by hsq on 2016/5/26.
  */
 public class ConfigUtil {
     public static String getDelegateClassName(Context context,String key){

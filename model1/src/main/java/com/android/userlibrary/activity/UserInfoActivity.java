@@ -10,7 +10,7 @@ import android.view.View;
 import com.android.userlibrary.R;
 
 /**
- * Created by Administrator on 2016/5/26.
+ * Created by hsq on 2016/5/26.
  */
 public class UserInfoActivity extends AppCompatActivity{
 

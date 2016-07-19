@@ -7,6 +7,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
+ * 动态代理类 创建model之间交互具体实现类
  * Created by hsq on 2016/7/19.
  */
 public class DynamicProxyHandler implements InvocationHandler {

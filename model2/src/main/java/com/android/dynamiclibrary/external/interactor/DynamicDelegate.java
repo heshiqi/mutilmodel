@@ -11,22 +11,22 @@ import com.android.commonlibrary.utils.ConfigUtil;
 /**
  * Created by hsq on 2016/5/26.
  */
-public class DynamicProxy implements IDynamic{
+public class DynamicDelegate implements IDynamic{
     private IDynamic iDynamic;
 
-    private static DynamicProxy dynamicProxy;
+    private static DynamicDelegate dynamicProxy;
 
-    public static DynamicProxy getInstance(Application contex){
-        final DynamicProxy proxy=dynamicProxy;
-        synchronized (DynamicProxy.class){
+    public static DynamicDelegate getInstance(Application contex){
+        final DynamicDelegate proxy=dynamicProxy;
+        synchronized (DynamicDelegate.class){
             if(proxy==null){
-                dynamicProxy=new DynamicProxy(contex);
+                dynamicProxy=new DynamicDelegate(contex);
             }
         }
         return  dynamicProxy;
     }
 
-    private DynamicProxy(Context context){
+    private DynamicDelegate(Context context){
         iDynamic= (IDynamic) DynamicProxyHandler.getProxy(context,ConfigUtil.getDelegateClassName(context,CommonCanstant.DYNAMIC_COMPONENT));
     }
     @Override
