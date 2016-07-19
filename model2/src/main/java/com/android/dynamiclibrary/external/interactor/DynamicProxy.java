@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.android.commonlibrary.CommonCanstant;
 import com.android.commonlibrary.entity.User;
+import com.android.commonlibrary.proxy.DynamicProxyHandler;
 import com.android.commonlibrary.utils.ConfigUtil;
 
 /**
@@ -27,15 +28,7 @@ public class DynamicProxy implements IDynamic{
     }
 
     private DynamicProxy(Context context){
-        try {
-            iDynamic= (IDynamic) Class.forName(ConfigUtil.getDelegateClassName(context,CommonCanstant.DYNAMIC_COMPONENT)).newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        iDynamic= (IDynamic) DynamicProxyHandler.getProxy(context,ConfigUtil.getDelegateClassName(context,CommonCanstant.DYNAMIC_COMPONENT));
     }
     @Override
     public User getUser() {

@@ -21,6 +21,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':dynamic')
-    compile project(':user')
+    compile project(':model2')
+    compile project(':model1')
 }
