@@ -9,10 +9,9 @@ import com.android.commonlibrary.proxy.DynamicProxyHandler;
 import com.android.commonlibrary.utils.ConfigUtil;
 
 /**
- * Created by Administrator on 2016/5/26.
+ * Created by hsq on 2016/5/26.
  */
 public class DynamicProxy implements IDynamic{
-    private static final String CLASS_PATH="com.android.componentapplication.delegate.DynamicDelegate";
     private IDynamic iDynamic;
 
     private static DynamicProxy dynamicProxy;
